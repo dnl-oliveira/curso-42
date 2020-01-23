@@ -1,0 +1,2 @@
+# libft
+Na 42 não podemos utilizar diversas funções das bibliotecas padrões do C, por isso o objetivo deste projeto é criar uma biblioteca C agrupando funções criadas por nos mesmos para usar em todos outros projetos. Portanto essa biblioteca poderá crescer ao longo do tempo com a adição de novas funções.

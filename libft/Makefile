@@ -6,7 +6,7 @@
 #    By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 19:37:24 by dnascime          #+#    #+#              #
-#    Updated: 2020/01/22 20:34:53 by dnascime         ###   ########.fr        #
+#    Updated: 2020/01/23 14:41:53 by dnascime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,9 @@ INCLUDES=./
 all: $(NAME)
 
 $(NAME): $(SRCS) libft.h
-	@gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
-	@ar rc $(NAME) $(OBJECTS)
-	@ranlib $(NAME)
+	gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
+	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 clean:
 	@/bin/rm -f $(OBJECTS)
