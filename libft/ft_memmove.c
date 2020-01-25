@@ -6,7 +6,7 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 13:45:49 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/25 13:55:59 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/01/25 15:08:02 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*ptr_dst;
 	const unsigned char	*ptr_src;
 
-	if(dst == NULL && src == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	ptr_dst = (unsigned char*)dst;
 	ptr_src = (unsigned char*)src;
