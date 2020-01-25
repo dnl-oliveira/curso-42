@@ -1,0 +1,7 @@
+*.a
+*.o
+.git
+.DS_STORE
+../.DS_Store
+*.out
+*.output

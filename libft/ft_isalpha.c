@@ -6,7 +6,7 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 20:53:19 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/22 18:35:03 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/01/25 12:21:12 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_isalpha(int n)
 {
-	return (ft_islower(n) || ft_isupper(n));
+	return ((n >= 97 && n <= 122) || (n >= 65 && n <= 90));
 }

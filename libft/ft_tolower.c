@@ -6,7 +6,7 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 21:18:39 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/22 17:06:01 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/01/25 12:25:27 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_tolower(int n)
 {
-	if (ft_isupper(n))
+	if (n >= 65 && n <= 90)
 		return (n + 32);
 	return (n);
 }
