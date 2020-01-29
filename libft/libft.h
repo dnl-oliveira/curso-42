@@ -6,7 +6,7 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 19:18:53 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/25 14:35:09 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/01/29 18:43:07 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int				ft_isalpha(int n);
 int				ft_isalnum(int n);
 int				ft_tolower(int n);
 int				ft_toupper(int n);
-int				ft_strlen(char *str);
+size_t			ft_strlen(const char *s);
 int				ft_atoi(const char *str);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -48,5 +48,10 @@ void			*ft_calloc(size_t count, size_t size);
 /*
 ** start second part functions
 */
-
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			**ft_split(char const *s, char c);
+char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
