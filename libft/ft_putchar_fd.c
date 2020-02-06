@@ -6,13 +6,13 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 17:13:25 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/30 17:17:42 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/06 18:04:17 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(unsigned char c, int fd)
 {
 	if (fd < 0)
 		return ;
