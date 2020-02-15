@@ -6,7 +6,7 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 19:03:07 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/30 19:04:35 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/15 12:35:07 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*new_elem;
+	t_list	*nlist;
+	t_list	*first;
 
-	if (!f || !del)
+	if (!lst)
 		return (NULL);
-	new_lst = NULL;
+	if (!(nlist = ft_lstnew(f(lst->content))))
+		return (NULL);
+	first = nlist;
 	while (lst)
 	{
-		if (!(new_elem = ft_lstnew(f(lst->content))))
+		if (lst->next)
 		{
-			ft_lstclear(&new_lst, del);
-			return (NULL);
+			if (!(nlist->next = ft_lstnew(f(lst->next->content))))
+			{
+				ft_lstclear(&first, del);
+				return (0);
+			}
+			nlist = nlist->next;
 		}
-		ft_lstadd_back(&new_lst, new_elem);
 		lst = lst->next;
 	}
-	return (new_lst);
+	nlist->next = NULL;
+	return (first);
 }
