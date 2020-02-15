@@ -6,11 +6,11 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 20:40:02 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/21 20:44:32 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/15 14:22:33 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_strncmp(const char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 
