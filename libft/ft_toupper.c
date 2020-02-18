@@ -6,15 +6,15 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 21:16:13 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/25 12:25:13 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/18 17:49:59 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int n)
+int		ft_toupper(int c)
 {
-	if (n >= 97 && n <= 122)
-		return (n - 32);
-	return (n);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

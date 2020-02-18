@@ -6,7 +6,7 @@
 #    By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 19:37:24 by dnascime          #+#    #+#              #
-#    Updated: 2020/01/30 19:16:46 by dnascime         ###   ########.fr        #
+#    Updated: 2020/02/18 17:40:02 by dnascime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME): $(SRCS) libft.h
 	ranlib $(NAME)
 
 clean:
-	/bin/rm -f $(OBJS)
+	/bin/rm -f $(OBJS) $(OBJSB)
 
 fclean: clean
 	/bin/rm -f $(NAME)

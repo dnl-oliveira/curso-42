@@ -6,11 +6,11 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 21:05:02 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/22 17:03:01 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/18 17:44:05 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int n)
+int		ft_isprint(int c)
 {
-	return (n >= 32 && n <= 126);
+	return (c >= 32 && c <= 126);
 }

@@ -6,15 +6,15 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 21:18:39 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/25 12:25:27 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/18 17:49:26 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int n)
+int		ft_tolower(int c)
 {
-	if (n >= 65 && n <= 90)
-		return (n + 32);
-	return (n);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

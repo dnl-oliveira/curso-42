@@ -6,11 +6,11 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 20:56:50 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/22 17:01:04 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/18 17:45:00 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int n)
+int		ft_isdigit(int c)
 {
-	return (n >= '0' && n <= '9');
+	return (c >= '0' && c <= '9');
 }
