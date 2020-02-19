@@ -10,23 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strdup(const char *s1)
 {
 	char	*new;
 	int		i;
 	int		size;
 
-	size = 0;
-	while (src[size])
-		++size;
-	if (!(new = malloc(sizeof(char) * (size + 1))))
-		return (NULL);
 	i = 0;
-	while (src[i])
+	size = 0;
+	while (s1[size] != '\0')
+		size++;
+	new = malloc(sizeof(char) * (size + 1));
+	if (new == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		new[i] = src[i];
+		new[i] = s1[i];
 		i++;
 	}
 	new[i] = '\0';

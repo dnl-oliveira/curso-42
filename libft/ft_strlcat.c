@@ -10,41 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	get_size(char *src)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int i;
+	size_t	i;
+	size_t	dst_lenght;
+	size_t	src_lenght;
 
 	i = 0;
-	while (src[i] != '\0')
+	dst_lenght = ft_strlen(dst);
+	src_lenght = ft_strlen(src);
+	if (dstsize <= dst_lenght)
+		return (dstsize + src_lenght);
+	while (dst[i])
 		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	dest_size;
-	unsigned int	remaing;
-	char			*destiny;
-	unsigned int	src_size;
-
-	remaing = size;
-	destiny = dest;
-	src_size = get_size(src);
-	while (remaing-- != 0 && *destiny != '\0')
-		destiny++;
-	dest_size = destiny - dest;
-	remaing = size - dest_size;
-	if (remaing == 0)
-		return (dest_size + src_size);
-	while (*src != '\0')
-	{
-		if (remaing > 1)
-		{
-			remaing--;
-			*destiny++ = *src;
-		}
-		src++;
-	}
-	*destiny = '\0';
-	return (dest_size + src_size);
+	while (*src && i < dstsize - 1)
+		dst[i++] = *(src++);
+	dst[i] = '\0';
+	return (dst_lenght + src_lenght);
 }
