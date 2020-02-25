@@ -6,4 +6,4 @@ A solução dada por mim, para os projetos apresentados durante minha jornada na
 | Projeto		| Status    				| Nota				|
 |---------------|---------------------------|-------------------|
 | [Libft](https://github.com/dnl007/curso-42/tree/master/libft)| [Em andamento]            | [--%]             |
-| [GetNextLine](https://github.com/dnl007/curso-42/tree/master/getnextline)| [Em andamento]            | [--%]             |
+| [GetNextLine](https://github.com/dnl007/curso-42/tree/master/get_next_line)| [Em andamento]            | [--%]             |
