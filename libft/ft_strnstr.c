@@ -26,10 +26,10 @@ char	*ft_strnstr(const char *haystack, const char *needle,
 		if (haystack[pos] == needle[0])
 		{
 			i = 1;
-			while (needle[z] != '\0' && haystack[pos + i] == needle[z]
-					&& (pos + z) < len)
+			while (needle[i] != '\0' && haystack[pos + i] == needle[i]
+					&& (pos + i) < len)
 				i++;
-			if (needle[z] == '\0')
+			if (needle[i] == '\0')
 			{
 				haystack = &haystack[pos];
 				return ((char*)haystack);
