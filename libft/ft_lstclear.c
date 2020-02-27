@@ -6,24 +6,24 @@
 /*   By: dnascime <dnascime@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 18:57:33 by dnascime          #+#    #+#             */
-/*   Updated: 2020/01/30 18:58:32 by dnascime         ###   ########.fr       */
+/*   Updated: 2020/02/27 17:16:44 by dnascime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*old_elem;
+	t_list	*previous_item;
 
 	if (!del)
 		return ;
 	while (*lst)
 	{
 		del((*lst)->content);
-		old_elem = *lst;
-		*lst = old_elem->next;
-		free(old_elem);
+		previous_item = *lst;
+		*lst = previous_item->next;
+		free(previous_item);
 	}
 	*lst = NULL;
 }
