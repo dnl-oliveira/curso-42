@@ -5,7 +5,7 @@
   - ##### IPv4: (comprimento de 32 bits ou 4 bytes)
     - O intervalo de alocação se estende de 0.0.0.0 a 255.255.255.255
   - ##### IPv6: (comprimento de 128 bits ou 16 bytes)
-    - 2<sup>128 possibilidades de endereço exclusivo.
+    - 2<sup>128</sup> possibilidades de endereço exclusivo.
     - 16 bits na forma de quatro dígitos hexadecimais * 8 separados por 2 pontos (":")
     - 64 bits são reservados para o endereço de rede e os 64 bits restantes permanecem para fornecer detalhes sobre a interface de rede host
     > Exemplo:
