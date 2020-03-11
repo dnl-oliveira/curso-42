@@ -1,17 +1,17 @@
 ### Resumo para estudo no projeto netwhat👌
 #### Para mais informações consulte o pdf na pasta [Subject](https://github.com/dnl007/curso-42/blob/master/netwhat/Subject/netwhat_en.subject.pdf).
 
-#### > IP (Internet Protocol) IPv4 e IPv6 :
-  - ##### IPv4: (comprimento de 32 bits ou 4 bytes)
+### 1. IP (Internet Protocol) IPv4 e IPv6 :
+  - #### IPv4: (comprimento de 32 bits ou 4 bytes)
     - O intervalo de alocação se estende de 0.0.0.0 a 255.255.255.255
-  - ##### IPv6: (comprimento de 128 bits ou 16 bytes)
-    - 2<sup>128 possibilidades de endereço exclusivo.
+  - #### IPv6: (comprimento de 128 bits ou 16 bytes)
+    - 2<sup>128</sup> possibilidades de endereço exclusivo.
     - 16 bits na forma de quatro dígitos hexadecimais * 8 separados por 2 pontos (":")
     - 64 bits são reservados para o endereço de rede e os 64 bits restantes permanecem para fornecer detalhes sobre a interface de rede host
     > Exemplo:
     > 2001:0DB8:AC10:FE01:0000:0000:0000:0000
 
-  - ##### Principais diferenças entre IPv4 e IPv6
+  - #### Principais diferenças entre IPv4 e IPv6
     - Espaços de endereço IPv6 maiores
     - O IPv6 foi criado para tornar a transferência de pacotes mais segura
     - Melhores recursos de multicast para IPv6
