@@ -17,9 +17,6 @@
     - Melhores recursos de multicast para IPv6
 ---
 
-* **"Domain name system (DNS)"** converte nomes de domínio da Internet e nomes de host em endereços IP.
-* O **Ping** usa o protocolo ICMP.
-
 ### 2. Classes de IP
 
 * As classes vão de **A a E**.
@@ -83,6 +80,98 @@
   ##### - Público:
   Esses endereços permitem que os computadores na rede se comuniquem entre si na Internet. Esses endereços são fornecidos pelo ISP (provedor de serviços de Internet). Cada endereço é único no mundo.
   ##### Exceções:
-  - A rede 127.0.0.0 é reservada para testes de loop local, como o endereço IP 127.0.0.1 ("localhost").
-  - A rede 0.0.0.0 também é reservada.
+  - O endereço 127.0.0.0 é reservado para testes de loop local, como o endereço IP 127.0.0.1 ("localhost").
+  - O endereço 0.0.0.0 também é reservado.
 
+---
+
+### 6. Máscara de sub-rede
+Permite distinguir a parte do endereço usado para roteamento e o que é usado para numerar interfaces (computadores, impressoras, etc.)
+Sendo codificado em 4 bytes e consistindo de uma série de 1 e 0, existem 32 possibilidades de máscara
+
+---
+
+### 7. TCP : (Transmission Control Protocol)
+O TCP é um protocolo da camada de transporte confiável que tem por objetivo garantir que os dados são integralmente transmitidos para os hosts de destino corretos, na sequência pelo qual foram enviados.
+
+O TCP particiona (segmenta) a informação recebida da Camada Aplicação em blocos menores de informação, conhecidos como datagramas, e embute um cabeçalho de identificação que permite ao host destino fazer a recomposição dos dados. Este cabeçalho contém um conjunto de bits (checksum) que permite a validação dos dados e do próprio cabeçalho.
+
+#### Características do TCP
+- Transferência de dados: Padrão full-duplex entre 2 pontos, ou seja, ambos os pontos conectados podem transmitir e receber simultaneamente.
+- Transferência de dados com diferentes prioridades: Interpreta as sinalizações de prioridades e organiza o encaminhamento dos datagramas segundo ela.
+- Estabelecimento e libertação de conexões: Solicita e aceita o início e o término das transmissões entre hosts.
+- Sequenciação: Ordenação dos pacotes recebidos.
+- Segmentação e reassemblagem: Divide uma informação maior em pacotes menores para transmissão. Dessa forma, identificando-os afim de serem reagrupados adequadamente em seu recebimento.
+- Controle de fluxo: Analista as condições da transmissão (velocidade, meio físico, tráfego, etc.) e adapta os datagramas para essa transmissão.
+- Controle de erros: Através do conjunto de bits (checksum) do seu cabeçalho, verifica se os dados transmitidos estão livres de erros. Além da detecção, é possível também a sua correção.
+- Multiplexagem de IP: Uma vez que é utilizado o conceito de portas, é possível enviar dados de diferentes tipos de serviços (portas diferentes) para o mesmo host de destino.
+- O TCP não suporta transmissão.
+- O TCP é comparativamente mais lento que o UDP.
+- O TCP fornece extensos mecanismos de verificação de erros. Isso ocorre porque fornece controle de fluxo e reconhecimento de dados.
+- O TCP é confiável, pois garante a entrega de dados ao roteador de destino.
+- A seqüência de dados é um recurso do TCP (isso significa que os pacotes chegam em ordem ao receptor).
+- TCP é um protocolo orientado a conexão.
+
+---
+
+  ### 8. UDP : (User Datagram Protocol)
+  Permite a troca entre dois usuários de uma maneira simples, cada um definido por um endereço IP e uma porta. Não é necessário ter comunicação prévia para estabelecer a conexão, ao contrário do TCP, que usa handshaking _ (Princípio em que duas entidades primeiro realizam uma "negociação" antes de uma comunicação) _. Os pacotes enviados no UDP são prefixados com um cabeçalho que contém o endereço de destino, suficiente para o seu envio.
+
+  #### > Propriedades:
+  - Não retém informações sobre o status das mensagens UDP. É definido como um protocolo não confiável
+  - "Orientado a transações", prático para protocolos simples de solicitação-resposta
+  - Fornece datagramas úteis para modelar outros protocolos
+  - Diz-se sem estado, prático para streaming
+  - Sem limite de tempo, prático em tempo real (bate-papos por voz, videogame etc.)
+  - Eficaz para comunicações unidirecionais
+
+  ### > Resumo:
+  - UDP suporta transmissão.
+  - O UDP é mais rápido, mais simples e mais eficiente que o TCP.
+  - UDP é um protocolo orientado a datagramas.
+  - O UDP possui apenas o mecanismo básico de controle de erros.
+  - A entrega de dados para o destino não pode ser garantida no UDP.
+  - Não há seqüência de dados no UDP. Se o pedido for necessário, ele deverá ser gerenciado pela camada do aplicativo.
+
+---
+
+### 9. Modelo OSI: (Open Systems Interconnection)
+ É um padrão de comunicação, em rede, para todos os sistemas de computadores, possui uma arquitetura em camadas. É proposto pela ISO (International Organization for Standardization)
+
+#### > Camadas:
+  - Aplicação
+  - Apresentação
+  - Transporte de Sessão
+  - Rede
+  - Link de Dados
+  - Físico
+
+---
+
+### 10. Servidor e protocolo DHCP:
+  É um serviço que entrega endereços IP a computadores que se conectam à rede. O servidor emitirá uma concessão de DHCP para o computador, que inclui:
+  - A vida útil da concessão (libera o endereço depois de um tempo. Se o computador ainda estiver conectado, ele fornecerá um novo endereço IP. Este sistema permite que os endereços IP sejam rotacionados).
+  - Um endereço IP (endereço dinâmico: alocação estática).
+  - E parâmetros de rede (endereço de gateway, endereço DNS).
+  - Suporta IPv4 e IPv6.
+  - Usa o protocolo UDP na camada de transporte.
+  - Mecanismo que automatiza a configuração de IP, incluindo endereço IP, máscara de sub-rede, gateway padrão e informações de DNS.
+
+---
+
+### 11. DNS:
+  O DNS — do inglês Domain Name System — é uma sigla para sistema de nomes de domínio. Como o nome sugere, é um registro que contém nomes de sites e respectivos endereços IP associados. Essa correlação favorece a transferência de dados entre computadores e permite o acesso à internet. Converte nomes de domínio da Internet e nomes de host em endereços IP.
+
+---
+
+### 12. Observações:
+
+  - O **Ping** usa o protocolo ICMP.
+
+#### > Um gateway:
+  Dispositivo para conectar duas redes de computadores de diferentes tipos:
+  - Repetidor (nível 1)
+  - Ponte (nível 2)
+  - Roteador (nível 3)
+
+  Um gateway é mais conhecido como roteador, conectando uma rede local à Internet. Também serve como firewall e proxy. Um gateway padrão é um gateway que gerencia o roteamento no nível do IP.
