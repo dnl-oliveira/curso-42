@@ -168,10 +168,76 @@ O TCP particiona (segmenta) a informação recebida da Camada Aplicação em blo
 
   - O **Ping** usa o protocolo ICMP.
 
-#### > Um gateway:
+---
+
+### 13. Gateway:
   Dispositivo para conectar duas redes de computadores de diferentes tipos:
   - Repetidor (nível 1)
   - Ponte (nível 2)
   - Roteador (nível 3)
 
   Um gateway é mais conhecido como roteador, conectando uma rede local à Internet. Também serve como firewall e proxy. Um gateway padrão é um gateway que gerencia o roteamento no nível do IP.
+
+---
+
+### 14. Roteamento IP :
+  Seleção dos caminhos, em uma rede, pelos quais os dados serão roteados, do remetente ao destinatário.
+
+---
+
+### 15. Portas :
+
+  - 0 a 1023: controlado e atribuído pela IANA, chamado portas conhecidas
+  - 1024 a 49156: portas registradas
+  - 49152 a 65535: portas dinâmicas
+
+  Um endereço IP + uma porta = um soquete: caminho pelo qual os pacotes passam
+
+---
+
+#### 16. Conversão decimal em binária:
+
+Conhecemos a tradução de um número decimal em binário, subtraindo potências de 2 para nosso decimal:\
+192 = 2<sup>7</sup> + 2<sup>6</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 128 + 64\
+168 = 2<sup>7</sup> + 2<sup>5</sup> + 2<sup>3</sup> = 128 + 32 + 8\
+1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2<sup>0</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1\
+2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 2
+  > Tabela de conversão :\
+  > Vamos traduzir : 192.168.1.2
+
+| &nbsp;&nbsp;&nbsp; | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |
+| ------------------ | --- | --- | --- | --- | --- | --- | --- | --- |
+| Decimal            | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |
+| 192                | 1   | 1   | 0   | 0   | 0   | 0   | 0   | 0   |
+| 168                | 1   | 0   | 1   | 0   | 1   | 0   | 0   | 0   |
+| 1                  | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
+| 2                  | 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   |
+
+#### > Cálculo do número de hosts possíveis em um endereço:
+  2<sup>32-CIDR(mascara)</sup>-2
+
+  > Então, para uma máscara de 19, temos
+  > 2<sup>32-19</sup>-2 = 8190 hosts possíveis
+
+#### > Complemento:
+
+Isso envolve converter de decimal para binário e, em seguida, inverter todos os bits de 1 para 0 e de 0 para 1
+  > Então: \
+  > &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;. 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;. 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1 . 0 0 0 0 0 0 0 0\
+  > Torna:\
+  > &nbsp;0 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0  . 1 1 &nbsp;1 1 &nbsp;1 1 &nbsp;1 1
+
+---
+
+### 17. NAT (Network Address Translation) :
+  - estático: correspondência individual estabelecida entre endereços locais e globais
+  - dinâmico: mapeamento de vários endereços locais para vários endereços globais
+  - tradução de endereço de porta (PAT): mapeamentos de vários endereços locais e globais para um único. Esse método também é chamado de "sobrecarga" (sobrecarga de NAT)
+
+#### > Atribuição estática:
+  - Definido pelo administrador da rede
+  - Permite um bom controle, mas somente para estruturas pequenas, porque, caso contrário, a sobrecarga de trabalho pode ser muito importante
+  - Útil para roteadores e firewalls
+
+#### > Alocação automática:
+  - Definido pelo servidor DHCP
