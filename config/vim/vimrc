@@ -1,0 +1,60 @@
+"Configuracoes que uso no vim para desenvolver em C
+"Autor: dnascime - Daniel Nascimento
+
+"Encoding
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+"Setar indentacao
+set autoindent
+
+"Setar indentacao inteligente para o C
+set smartindent
+
+"Ativar o destaque de sintaxe
+syntax on
+set t_Co=256
+
+"Ativar numero de linha
+set number
+
+"Destacar chaves coreespondentes
+set showmatch
+
+"Comentarios
+set comments=sl:/*,mb:\ *,elx:\ */
+
+"Configurar tabulacao
+set tabstop=4		" tab com 4 espacos
+set shiftwidth=4	" recuo com 4 espacos
+set expandtab		" expandir tabs para espacos
+
+"Incluir cabecalho da 42 - Requer plugin https://github.com/gcamerli/42header
+nmap <F12> :Stdheader<CR>
+
+"setar tecla F2 para salvar arquivo, modo normal apenas salva
+nmap <F2> :w<CR>
+"modo INSERT - Sai do modo insert, salva o arquivo, depois retorna para insert
+imap <F2> <ESC>:w<CR>i
+"setar F3 para salvar e sair
+nmap <F3> :wq<CR>
+"setar F4 para sair sem salvar, descantando alteracoes
+nmap <F4> :q!<CR>
+
+"ignorar maiuscula e minuscula nas pesquisas
+set ignorecase
+
+"backspace no modo insert
+set backspace=indent,eol,start
+
+"mostrar comandos incompletos
+set showcmd
+
+"carregas plugins do tipo do arquivo mais indentacao
+filetype plugin indent on
+
+set nowrap
+
+"desabilitar compatibilidade com o vi
+set nocompatible
